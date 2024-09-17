@@ -5,6 +5,21 @@ import './App.css'
 import '../src/index.css'
 import Header from './components/Header'
 import Main from './components/main'
+import asamblea2024 from './assets/asamblea2024.jpg'
+import bicisorteo from './assets/bicisorteo.jpg'
+import firmacamed from './assets/firmacamed.jpg'
+
+const images = [
+    
+   
+asamblea2024,
+bicisorteo,
+firmacamed
+      
+     
+ 
+  ];
+  
 
 function App() {
   
@@ -12,7 +27,10 @@ function App() {
     <>
     < Header />
     <Main />
-      
+    <div>
+      <h1>Carrusel de Imágenes</h1>
+      <Carrusel images={images} />
+    </div>
     </>
   )
 }
