@@ -1,38 +1,44 @@
 import React from 'react'
 import Carrousel from '../components/Carrousel'
-import cabañas from '../assets/cabañas.jpg'
-import fotosanisidro from '../assets/fotosanisidro.jpg'
-import bicisorteo from '../assets/bicisorteo.jpg'
-import asamblea2024 from '../assets/asamblea2024.jpg'
-import firmacamed from '../assets/firmacamed.jpg'
+import Article from '../components/Article'
 
-
-const images = [       
-  cabañas,
-  fotosanisidro,
-  asamblea2024,
-  bicisorteo,
-  firmacamed
-           
-    ];
+const articles = [  
+  {  
+      imagenArt: "url_de_imagen_1.jpg",   
+      titulo: "Título del Artículo 1",  
+      descripcion: "Descripción del artículo 1"  
+  },  
+  {  
+      imagenArt: "url_de_imagen_2.jpg",   
+      titulo: "Título del Artículo 2",  
+      descripcion: "Descripción del artículo 2"  
+  },  
+  {  
+      imagenArt: "url_de_imagen_3.jpg",   
+      titulo: "Título del Artículo 3",  
+      descripcion: "Descripción del artículo 3"  
+  }  
+];  
 
 
 export default function Main() {
   return (
-    <main>
-      <div className=''>
-         <div className='flex'>
-          <Carrousel/>
-          {images.map((i)=>(
-            <img src={i} />
-          ))}  
+    <main className='flex flex-col gap-10'>
+      <div className="mt-10">
+          <Carrousel />
+      </div>    
+      <div className="flex flex-col gap-4">  
+    {articles.map((article, index) => (  
+        <Article   
+            key={index}   
+            imagen={article.imagen}   
+            titulo={article.titulo}   
+            descripcion={article.descripcion}   
+        />  
+    ))}  
+</div>  
 
-         </div>   
-      </div>  
-
-
-
-
+    
 
     </main>
   )
