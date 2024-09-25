@@ -23,15 +23,15 @@ const articles = [
 
 export default function Main() {
   return (
-    <main className='flex flex-col gap-10'>
+    <main className='flex flex-col gap-10 items-center'>
       <div className="mt-10">
           <Carrousel />
       </div>    
-      <div className="flex flex-col gap-4">  
+      <div className="flex flex-col gap-4 items-center px-3.5 w-full">  
     {articles.map((article, index) => (  
         <Article   
             key={index}   
-            imagen={article.imagen}   
+            imagen={article.imagenArt}   
             titulo={article.titulo}   
             descripcion={article.descripcion}   
         />  
